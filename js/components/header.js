@@ -1,5 +1,15 @@
+import { getCtaUrl } from "../cta.js";
+
 function renderHeader(data) {
     const business = data.business || {};
+
+    const headerCta = data.conversion?.primary || {
+        label: "Get Started",
+        type: "anchor",
+        value: "#conversion"
+    };
+
+    const headerCtaUrl = getCtaUrl(headerCta);
 
     return `
         <header class="site-header">
@@ -25,8 +35,8 @@ function renderHeader(data) {
                     <a href="#faq">FAQ</a>
                 </nav>
 
-                <a href="#conversion" class="header-cta">
-                    Get Started
+                <a href="${headerCtaUrl}" class="header-cta">
+                    ${headerCta.label}
                 </a>
 
             </div>
