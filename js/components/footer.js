@@ -53,6 +53,11 @@ ${contact.email
                         ? `<span>${contact.address}</span>`
                         : ""
                     }
+
+                    ${contact.hours
+    ? `<span>${contact.hours}</span>`
+    : ""
+}
                 </div>
 
                 ${
