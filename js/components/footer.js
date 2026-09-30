@@ -1,3 +1,4 @@
+import { getCtaUrl } from "../cta.js";
 function renderFooter(data) {
     const business = data.business || {};
     const contact = data.contact || {};
@@ -27,15 +28,19 @@ function renderFooter(data) {
 
                 <div class="footer-contact">
                     ${contact.phone
-                        ? `<a href="tel:${contact.phone}">${contact.phone}</a>`
-                        : ""
-                    }
-
+    ? `<a href="${getCtaUrl({
+        type: "phone",
+        value: contact.phone
+    })}">${contact.phone}</a>`
+    : ""
+}
                     ${contact.email
-                        ? `<a href="mailto:${contact.email}">${contact.email}</a>`
-                        : ""
-                    }
-
+    ? `<a href="${getCtaUrl({
+        type: "email",
+        value: contact.email
+    })}">${contact.email}</a>`
+    : ""
+}
                     ${contact.address
                         ? `<span>${contact.address}</span>`
                         : ""
