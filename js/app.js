@@ -13,12 +13,25 @@ async function loadBusinessData() {
     try {
         const response = await fetch("data/business.json?v=2");
         const data = await response.json();
+
+        document.title = data.business?.name || "Business Landing System";
+
+        const description = document.querySelector(
+            'meta[name="description"]'
+        );
+
+        if (description) {
+            description.setAttribute(
+                "content",
+                data.business?.description || "Professional business landing page."
+            );
+        }
+
         renderPage(data);
     } catch (error) {
         console.error("Failed to load business data:", error);
     }
 }
-
 function renderPage(data) {
     app.innerHTML = `
         ${renderHeader(data)}
