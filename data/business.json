@@ -1,0 +1,178 @@
+{
+  "business": {
+    "name": "Your Business Name",
+    "tagline": "",
+    "description": "",
+    "logo": ""
+  },
+
+  "contact": {
+    "whatsapp": "",
+    "phone": "",
+    "email": "",
+    "address": "",
+    "hours": ""
+  },
+
+  "hero": {
+  "eyebrow": "Professional Business Solutions",
+  "headline": "Turn More Visitors Into Customers",
+  "subheadline": "A professional landing page designed to turn your online traffic into enquiries, bookings and customers.",
+  "image": "",
+  "imageAlt": "",
+
+  "primaryCta": {
+    "label": "Get Started",
+    "type": "whatsapp",
+    "value": ""
+  },
+
+  "secondaryCta": {
+    "label": "Learn More",
+    "type": "anchor",
+    "value": "#services"
+  }
+},
+
+"offer": {
+  "enabled": true,
+  "eyebrow": "A Simple Business Solution",
+  "title": "Get More From Your Online Presence",
+  "description": "A focused landing page designed to help your business turn online visitors into real enquiries, bookings and customers.",
+  "image": "",
+  "highlights": [
+    "Professional presentation",
+    "Clear customer journey",
+    "Built for enquiries and bookings"
+  ]
+},
+  
+"services": {
+  "enabled": true,
+  "items": [
+    {
+      "title": "Professional Landing Pages",
+      "description": "Conversion-focused landing pages designed to turn visitors into enquiries and customers.",
+      "image": ""
+    },
+    {
+      "title": "Digital Marketing",
+      "description": "Practical digital marketing support designed to help businesses reach and engage more customers.",
+      "image": ""
+    },
+    {
+      "title": "HD Video Advertising",
+      "description": "Professional promotional video content created to help businesses present their products and services effectively.",
+      "image": ""
+    }
+  ]
+},  
+
+"proof": {
+  "enabled": true,
+
+  "testimonials": [
+    {
+      "quote": "Professional service and a smooth experience from start to finish.",
+      "name": "Sample Customer"
+    }
+  ],
+
+  "reviews": [],
+
+  "statistics": [
+    {
+      "value": "100+",
+      "label": "Customers Served"
+    },
+    {
+      "value": "5★",
+      "label": "Customer Rating"
+    },
+    {
+      "value": "24/7",
+      "label": "Online Availability"
+    }
+  ],
+
+  "certifications": [],
+  "portfolio": [],
+  "clientLogos": []
+},  
+
+  "howItWorks": {
+  "enabled": true,
+  "title": "How It Works",
+  "description": "A simple process designed to make getting started easy.",
+  "steps": [
+    {
+      "title": "Tell Us What You Need",
+      "description": "Share your requirements and goals with us."
+    },
+    {
+      "title": "We Create the Solution",
+      "description": "We develop the right solution around your business needs."
+    },
+    {
+      "title": "Launch and Grow",
+      "description": "Your solution goes live and helps turn visitors into customers."
+    }
+  ]
+},
+  
+"conversion": {
+  "eyebrow": "Ready to Get Started?",
+  "title": "Let's Talk About Your Business",
+  "description": "Tell us what you need and we'll help you find the right solution.",
+  "primary": {
+    "label": "Get Started",
+    "type": "whatsapp",
+    "value": "2348000000000"
+  },
+  "secondary": [
+    {
+      "label": "Call Us",
+      "type": "phone",
+      "value": "+2348000000000"
+    }
+  ]
+},  
+
+"faq": {
+  "enabled": true,
+  "items": [
+    {
+      "question": "How do I get started?",
+      "answer": "Simply contact us through the primary action on this page and tell us what your business needs."
+    },
+    {
+      "question": "How long does a project take?",
+      "answer": "Project timelines depend on the scope and requirements. We will discuss the expected timeline before work begins."
+    },
+    {
+      "question": "Can you create a solution for my specific business?",
+      "answer": "Yes. The system is designed so each business can have its own content, services, calls to action and customer journey."
+    }
+  ]
+},  
+
+  "social": {
+    "instagram": "",
+    "facebook": "",
+    "tiktok": "",
+    "linkedin": "",
+    "youtube": ""
+  },
+
+  "settings": {
+    "sections": {
+      "hero": true,
+      "offer": true,
+      "services": true,
+      "proof": false,
+      "howItWorks": false,
+      "conversion": true,
+      "faq": false
+    }
+  }
+}
