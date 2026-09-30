@@ -34,7 +34,15 @@ function renderFooter(data) {
     })}">${contact.phone}</a>`
     : ""
 }
-                    ${contact.email
+${contact.whatsapp
+    ? `<a href="${getCtaUrl({
+        type: "whatsapp",
+        value: contact.whatsapp
+    })}" target="_blank" rel="noopener noreferrer">WhatsApp</a>`
+    : ""
+}
+
+${contact.email
     ? `<a href="${getCtaUrl({
         type: "email",
         value: contact.email
