@@ -33,15 +33,46 @@ async function loadBusinessData() {
     }
 }
 function renderPage(data) {
+    const sections = data.settings?.sections || {};
+
     app.innerHTML = `
         ${renderHeader(data)}
-        ${renderHero(data.hero)}
-        ${renderOffer(data.offer)}
-        ${renderServices(data.services)}
-        ${renderProof(data.proof)}
-        ${renderHowItWorks(data.howItWorks)}
-        ${renderConversion(data.conversion)}
-        ${renderFaq(data.faq)}
+
+        ${sections.hero !== false
+            ? renderHero(data.hero)
+            : ""
+        }
+
+        ${sections.offer !== false
+            ? renderOffer(data.offer)
+            : ""
+        }
+
+        ${sections.services !== false
+            ? renderServices(data.services)
+            : ""
+        }
+
+        ${sections.proof !== false
+            ? renderProof(data.proof)
+            : ""
+        }
+
+        ${sections.howItWorks !== false
+            ? renderHowItWorks(data.howItWorks)
+            : ""
+        }
+
+        ${sections.conversion !== false
+            ? renderConversion(data.conversion)
+            : ""
+        }
+
+        ${sections.faq !== false
+            ? renderFaq(data.faq)
+            : ""
+        }
+
         ${renderFooter(data)}
     `;
 }

@@ -2,7 +2,7 @@ import { getCtaUrl } from "../cta.js";
 
 function renderHeader(data) {
     const business = data.business || {};
-
+    const sections = data.settings?.sections || {};
     const headerCta = data.conversion?.primary || {
         label: "Get Started",
         type: "anchor",
@@ -30,9 +30,20 @@ function renderHeader(data) {
                 </a>
 
                 <nav class="main-nav" aria-label="Main navigation">
-                    <a href="#services">Services</a>
-                    <a href="#how-it-works">How It Works</a>
-                    <a href="#faq">FAQ</a>
+                    ${sections.services !== false
+    ? `<a href="#services">Services</a>`
+    : ""
+}
+
+${sections.howItWorks !== false
+    ? `<a href="#how-it-works">How It Works</a>`
+    : ""
+}
+
+${sections.faq !== false
+    ? `<a href="#faq">FAQ</a>`
+    : ""
+}
                 </nav>
 
                 <a href="${headerCtaUrl}" class="header-cta">
