@@ -1,58 +1,67 @@
 import { getCtaUrl } from "../cta.js";
 
 function renderHeader(data) {
-    const business = data.business || {};
-    const sections = data.settings?.sections || {};
-    const headerCta = data.conversion?.primary || {
-        label: "Get Started",
-        type: "anchor",
-        value: "#conversion"
-    };
+const business = data.business || {};
+const sections = data.settings?.sections || {};
 
-    const headerCtaUrl = getCtaUrl(headerCta);
+const headerCta = data.conversion?.primary || {
+    label: "Get Started",
+    type: "anchor",
+    value: "#conversion"
+};
 
-    return `
-        <header class="site-header">
-            <div class="header-inner">
+const headerCtaUrl = getCtaUrl(headerCta);
 
-                <a href="#" class="brand">
-                    ${business.logo
-                        ? `
-                            <img
-                                src="${business.logo}"
-                                alt="${business.name || "Business"}"
-                            >
-                          `
-                        : ""
-                    }
+return `
+    <header class="site-header">
+        <div class="header-inner">
 
-                    <span>${business.name || "Your Business Name"}</span>
-                </a>
+            <a href="#" class="brand">
+                ${business.logo
+                    ? `
+                        <img
+                            src="${business.logo}"
+                            alt="${business.name || "Business"}"
+                        >
+                      `
+                    : ""
+                }
 
-                <nav class="main-nav" aria-label="Main navigation">
-                    ${sections.services !== false
-    ? `<a href="#services">Services</a>`
-    : ""
-}
+                <span>
+                    ${business.name || "Your Business Name"}
+                </span>
+            </a>
 
-${sections.howItWorks !== false
-    ? `<a href="#how-it-works">How It Works</a>`
-    : ""
-}
+            <nav class="main-nav" aria-label="Main navigation">
 
-${sections.faq !== false
-    ? `<a href="#faq">FAQ</a>`
-    : ""
-}
-                </nav>
+                ${sections.services !== false
+                    ? `<a href="#services">Services</a>`
+                    : ""
+                }
 
-                <a href="${headerCtaUrl}" class="header-cta">
-                    ${headerCta.label}
-                </a>
+                ${sections.howItWorks !== false
+                    ? `<a href="#how-it-works">How It Works</a>`
+                    : ""
+                }
 
-            </div>
-        </header>
-    `;
+                ${sections.faq !== false
+                    ? `<a href="#faq">FAQ</a>`
+                    : ""
+                }
+
+            </nav>
+
+            <a
+                href="${headerCtaUrl}"
+                class="header-cta"
+            >
+                ${headerCta.label || "Get Started"}
+            </a>
+
+        </div>
+    </header>
+`;
+
 }
 
 export { renderHeader };
