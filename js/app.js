@@ -7,6 +7,7 @@ import { renderConversion } from "./components/conversion.js";
 import { renderFaq } from "./components/faq.js";
 import { renderHeader } from "./components/header.js";
 import { renderFooter } from "./components/footer.js";
+import { validateBusinessData } from "./validateBusinessData.js";
 
 const app = document.getElementById("app");
 
@@ -21,6 +22,16 @@ const response = await fetch("data/business.json?v=2");
     }
 
     const data = await response.json();
+
+    const validation = validateBusinessData(data);
+
+    if (!validation.valid) {
+        console.error(
+            "Invalid business data:",
+            validation.errors
+        );
+        return;
+    }
 
     document.title =
         data.business?.name || "Business Landing System";
@@ -40,7 +51,10 @@ const response = await fetch("data/business.json?v=2");
     renderPage(data);
 
 } catch (error) {
-    console.error("Failed to load business data:", error);
+    console.error(
+        "Failed to load business data:",
+        error
+    );
 }
 
 }
