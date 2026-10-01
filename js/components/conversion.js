@@ -1,60 +1,59 @@
 import { getCtaUrl } from "../cta.js";
 
 function renderConversion(conversion) {
-    if (!conversion || !conversion.primary) {
-        return "";
-    }
+if (!conversion || !conversion.primary) {
+return "";
+}
 
-    const primaryUrl = getCtaUrl(conversion.primary);
+const primaryUrl = getCtaUrl(conversion.primary);
 
-    return `
-        <section class="conversion" id="conversion">
-            <div class="conversion-content">
+let html = "";
 
-                ${conversion.eyebrow
-                    ? `<p class="conversion-eyebrow">
-                        ${conversion.eyebrow}
-                       </p>`
-                    : ""
-                }
+html += '<section class="conversion" id="conversion">';
+html += '<div class="conversion-content">';
 
-                ${conversion.title
-                    ? `<h2>${conversion.title}</h2>`
-                    : ""
-                }
+if (conversion.eyebrow) {
+    html += '<p class="conversion-eyebrow">';
+    html += conversion.eyebrow;
+    html += '</p>';
+}
 
-                ${conversion.description
-                    ? `<p class="conversion-description">
-                        ${conversion.description}
-                       </p>`
-                    : ""
-                }
+if (conversion.title) {
+    html += '<h2>';
+    html += conversion.title;
+    html += '</h2>';
+}
 
-                <div class="conversion-actions">
-                    <a
-                        href="${primaryUrl}"
-                        class="cta cta-primary"
-                    >
-                        ${conversion.primary.label}
-                    </a>
+if (conversion.description) {
+    html += '<p class="conversion-description">';
+    html += conversion.description;
+    html += '</p>';
+}
 
-                    ${
-                        conversion.secondary && conversion.secondary.length
-                            ? conversion.secondary.map(cta => `
-                                <a
-                                    href="${getCtaUrl(cta)}"
-                                    class="cta cta-secondary"
-                                >
-                                    ${cta.label}
-                                </a>
-                            `).join("")
-                            : ""
-                    }
-                </div>
+html += '<div class="conversion-actions">';
 
-            </div>
-        </section>
-    `;
+html += '<a ';
+html += 'href="' + primaryUrl + '" ';
+html += 'class="cta cta-primary">';
+html += conversion.primary.label || "";
+html += '</a>';
+
+if (conversion.secondary && conversion.secondary.length) {
+    conversion.secondary.forEach(cta => {
+        html += '<a ';
+        html += 'href="' + getCtaUrl(cta) + '" ';
+        html += 'class="cta cta-secondary">';
+        html += cta.label || "";
+        html += '</a>';
+    });
+}
+
+html += '</div>';
+html += '</div>';
+html += '</section>';
+
+return html;
+
 }
 
 export { renderConversion };
