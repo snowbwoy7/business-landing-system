@@ -173,7 +173,7 @@
         "proof": true,
         "howItWorks": true,
         "conversion": true,
-        "faq": false
+        "faq": true
     }
 }
 }

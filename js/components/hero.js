@@ -1,49 +1,76 @@
 import { getCtaUrl } from "../cta.js";
 
 function renderHero(hero) {
-    const primaryCtaUrl = getCtaUrl(hero.primaryCta);
-    const secondaryCtaUrl = getCtaUrl(hero.secondaryCta);
+    const primaryCta = hero?.primaryCta;
+    const secondaryCta = hero?.secondaryCta;
 
-const heroImage = hero.image
-    ? `
-        <div class="hero-media">
-            <img
-                src="${hero.image}"
-                alt="${hero.imageAlt || ""}"
+    const primaryCtaUrl = primaryCta
+        ? getCtaUrl(primaryCta)
+        : "";
+
+    const secondaryCtaUrl = secondaryCta
+        ? getCtaUrl(secondaryCta)
+        : "";
+
+    const heroImage = hero?.image
+        ? `
+            <div class="hero-media">
+                <img
+                    src="${hero.image}"
+                    alt="${hero.imageAlt || ""}"
+                >
+            </div>
+          `
+        : "";
+
+    const primaryCtaHtml = primaryCta
+        ? `
+            <a
+                href="${primaryCtaUrl}"
+                class="cta cta-primary"
             >
-        </div>
-      `
-    : "";
+                ${primaryCta.label || ""}
+            </a>
+          `
+        : "";
+
+    const secondaryCtaHtml = secondaryCta
+        ? `
+            <a
+                href="${secondaryCtaUrl}"
+                class="cta cta-secondary"
+            >
+                ${secondaryCta.label || ""}
+            </a>
+          `
+        : "";
 
     return `
         <section class="hero">
             <div class="hero-content">
-                <p class="hero-eyebrow">${hero.eyebrow}</p>
 
-                <h1>${hero.headline}</h1>
+                <p class="hero-eyebrow">
+                    ${hero?.eyebrow || ""}
+                </p>
+
+                <h1>
+                    ${hero?.headline || ""}
+                </h1>
 
                 <p class="hero-subheadline">
-                    ${hero.subheadline}
+                    ${hero?.subheadline || ""}
                 </p>
 
                 <div class="hero-actions">
-                    <a
-                        href="${primaryCtaUrl}"
-                        class="cta cta-primary"
-                    >
-                        ${hero.primaryCta.label}
-                    </a>
-
-                    <a
-                        href="${secondaryCtaUrl}"
-                        class="cta cta-secondary"
-                    >
-                        ${hero.secondaryCta.label}
-                    </a>
+                    ${primaryCtaHtml}
+                    ${secondaryCtaHtml}
                 </div>
+
             </div>
-        ${heroImage}
-            </section>
+
+            ${heroImage}
+
+        </section>
     `;
 }
 
