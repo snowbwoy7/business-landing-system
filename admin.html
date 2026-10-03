@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Business Admin</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<main id="admin-app">
+
+    <h1>Business Admin</h1>
+
+
+    <!-- BUSINESS INFORMATION -->
+
+    <section class="admin-section">
+
+        <h2>Business Information</h2>
+
+        <form id="business-form">
+
+            <div class="admin-field">
+                <label for="business-name">
+                    Business Name
+                </label>
+
+                <input
+                    type="text"
+                    id="business-name"
+                    name="name"
+                    placeholder="Your Business Name"
+                    autocomplete="organization"
+                >
+            </div>
+
+            <div class="admin-field">
+                <label for="business-tagline">
+                    Tagline
+                </label>
+
+                <input
+                    type="text"
+                    id="business-tagline"
+                    name="tagline"
+                    placeholder="Your business tagline"
+                >
+            </div>
+
+            <div class="admin-field">
+                <label for="business-description">
+                    Description
+                </label>
+
+                <textarea
+                    id="business-description"
+                    name="description"
+                    rows="5"
+                    placeholder="Describe your business"
+                ></textarea>
+            </div>
+
+            <div class="admin-field">
+                <label for="business-logo">
+                    Logo
+                </label>
+
+                <input
+                    type="text"
+                    id="business-logo"
+                    name="logo"
+                    placeholder="Logo image path or URL"
+                >
+            </div>
+
+            <button type="submit">
+                Save Business Information
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- CONTACT INFORMATION -->
+
+    <section class="admin-section">
+
+        <h2>Contact Information</h2>
+
+        <form id="contact-form">
+
+            <div class="admin-field">
+                <label for="contact-whatsapp">
+                    WhatsApp
+                </label>
+
+                <input
+                    type="text"
+                    id="contact-whatsapp"
+                    name="whatsapp"
+                    placeholder="2348000000000"
+                    autocomplete="tel"
+                >
+            </div>
+
+            <div class="admin-field">
+                <label for="contact-phone">
+                    Phone
+                </label>
+
+                <input
+                    type="tel"
+                    id="contact-phone"
+                    name="phone"
+                    placeholder="+2348000000000"
+                    autocomplete="tel"
+                >
+            </div>
+
+            <div class="admin-field">
+                <label for="contact-email">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="contact-email"
+                    name="email"
+                    placeholder="you@example.com"
+                    autocomplete="email"
+                >
+            </div>
+
+            <div class="admin-field">
+                <label for="contact-address">
+                    Address
+                </label>
+
+                <input
+                    type="text"
+                    id="contact-address"
+                    name="address"
+                    placeholder="Business address"
+                    autocomplete="street-address"
+                >
+            </div>
+
+            <div class="admin-field">
+                <label for="contact-hours">
+                    Business Hours
+                </label>
+
+                <input
+                    type="text"
+                    id="contact-hours"
+                    name="hours"
+                    placeholder="Mon - Fri, 9:00 AM - 5:00 PM"
+                >
+            </div>
+
+            <button type="submit">
+                Save Contact Information
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- HERO SECTION -->
+
+    <section class="admin-section">
+
+        <h2>Hero Section</h2>
+
+        <form id="hero-form">
+
+            <div class="admin-field">
+                <label for="hero-eyebrow">
+                    Eyebrow
+                </label>
+
+                <input
+                    type="text"
+                    id="hero-eyebrow"
+                    name="eyebrow"
+                    placeholder="Professional Business Solutions"
+                >
+            </div>
+
+            <div class="admin-field">
+                <label for="hero-headline">
+                    Headline
+                </label>
+
+                <input
+                    type="text"
+                    id="hero-headline"
+                    name="headline"
+                    placeholder="Turn More Visitors Into Customers"
+                >
+            </div>
+
+            <div class="admin-field">
+                <label for="hero-subheadline">
+                    Subheadline
+                </label>
+
+                <textarea
+                    id="hero-subheadline"
+                    name="subheadline"
+                    rows="4"
+                    placeholder="Your main supporting message"
+                ></textarea>
+            </div>
+
+            <div class="admin-field">
+                <label for="hero-image">
+                    Hero Image
+                </label>
+
+                <input
+                    type="text"
+                    id="hero-image"
+                    name="image"
+                    placeholder="Image path or URL"
+                >
+            </div>
+
+            <div class="admin-field">
+                <label for="hero-image-alt">
+                    Image Alt Text
+                </label>
+
+                <input
+                    type="text"
+                    id="hero-image-alt"
+                    name="imageAlt"
+                    placeholder="Describe the hero image"
+                >
+            </div>
+
+
+            <h3>Primary Call To Action</h3>
+
+            <div class="admin-field">
+                <label for="hero-primary-label">
+                    Button Label
+                </label>
+
+                <input
+                    type="text"
+                    id="hero-primary-label"
+                    name="primaryLabel"
+                    placeholder="Get Started"
+                >
+            </div>
+
+            <div class="admin-field">
+                <label for="hero-primary-type">
+                    Button Type
+                </label>
+
+                <select
+                    id="hero-primary-type"
+                    name="primaryType"
+                >
+                    <option value="whatsapp">WhatsApp</option>
+                    <option value="phone">Phone</option>
+                    <option value="email">Email</option>
+                    <option value="anchor">Page Section</option>
+                    <option value="url">Website URL</option>
+                </select>
+            </div>
+
+            <div class="admin-field">
+                <label for="hero-primary-value">
+                    Button Value
+                </label>
+
+                <input
+                    type="text"
+                    id="hero-primary-value"
+                    name="primaryValue"
+                    placeholder="WhatsApp number, phone, email, URL or #section"
+                >
+            </div>
+
+
+            <h3>Secondary Call To Action</h3>
+
+            <div class="admin-field">
+                <label for="hero-secondary-label">
+                    Button Label
+                </label>
+
+                <input
+                    type="text"
+                    id="hero-secondary-label"
+                    name="secondaryLabel"
+                    placeholder="Learn More"
+                >
+            </div>
+
+            <div class="admin-field">
+                <label for="hero-secondary-type">
+                    Button Type
+                </label>
+
+                <select
+                    id="hero-secondary-type"
+                    name="secondaryType"
+                >
+                    <option value="anchor">Page Section</option>
+                    <option value="whatsapp">WhatsApp</option>
+                    <option value="phone">Phone</option>
+                    <option value="email">Email</option>
+                    <option value="url">Website URL</option>
+                </select>
+            </div>
+
+            <div class="admin-field">
+                <label for="hero-secondary-value">
+                    Button Value
+                </label>
+
+                <input
+                    type="text"
+                    id="hero-secondary-value"
+                    name="secondaryValue"
+                    placeholder="#services"
+                >
+            </div>
+
+            <button type="submit">
+                Save Hero Section
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- OFFER SECTION -->
+
+    <section class="admin-section">
+
+        <h2>Offer Section</h2>
+
+        <form id="offer-form">
+
+            <div class="admin-field">
+
+                <label for="offer-enabled">
+                    Show Offer Section
+                </label>
+
+                <select
+                    id="offer-enabled"
+                    name="enabled"
+                >
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                </select>
+
+            </div>
+
+
+            <div class="admin-field">
+
+                <label for="offer-eyebrow">
+                    Eyebrow
+                </label>
+
+                <input
+                    type="text"
+                    id="offer-eyebrow"
+                    name="eyebrow"
+                    placeholder="A Simple Business Solution"
+                >
+
+            </div>
+
+
+            <div class="admin-field">
+
+                <label for="offer-title">
+                    Title
+                </label>
+
+                <input
+                    type="text"
+                    id="offer-title"
+                    name="title"
+                    placeholder="Get More From Your Online Presence"
+                >
+
+            </div>
+
+
+            <div class="admin-field">
+
+                <label for="offer-description">
+                    Description
+                </label>
+
+                <textarea
+                    id="offer-description"
+                    name="description"
+                    rows="5"
+                    placeholder="Describe your offer"
+                ></textarea>
+
+            </div>
+
+
+            <div class="admin-field">
+
+                <label for="offer-image">
+                    Offer Image
+                </label>
+
+                <input
+                    type="text"
+                    id="offer-image"
+                    name="image"
+                    placeholder="Image path or URL"
+                >
+
+            </div>
+
+
+            <h3>Offer Highlights</h3>
+
+
+            <div class="admin-field">
+
+                <label for="offer-highlight-1">
+                    Highlight 1
+                </label>
+
+                <input
+                    type="text"
+                    id="offer-highlight-1"
+                    placeholder="Professional presentation"
+                >
+
+            </div>
+
+
+            <div class="admin-field">
+
+                <label for="offer-highlight-2">
+                    Highlight 2
+                </label>
+
+                <input
+                    type="text"
+                    id="offer-highlight-2"
+                    placeholder="Clear customer journey"
+                >
+
+            </div>
+
+
+            <div class="admin-field">
+
+                <label for="offer-highlight-3">
+                    Highlight 3
+                </label>
+
+                <input
+                    type="text"
+                    id="offer-highlight-3"
+                    placeholder="Built for enquiries and bookings"
+                >
+
+            </div>
+
+
+            <button type="submit">
+                Save Offer Section
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- SERVICES SECTION -->
+
+    <section class="admin-section">
+
+        <h2>Services Section</h2>
+
+        <form id="services-form">
+
+            <div class="admin-field">
+
+                <label for="services-enabled">
+                    Show Services Section
+                </label>
+
+                <select
+                    id="services-enabled"
+                    name="enabled"
+                >
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                </select>
+
+            </div>
+
+
+            <h3>Service 1</h3>
+
+            <div class="admin-field">
+
+                <label for="service-1-title">
+                    Title
+                </label>
+
+                <input
+                    type="text"
+                    id="service-1-title"
+                    placeholder="Service title"
+                >
+
+            </div>
+
+            <div class="admin-field">
+
+                <label for="service-1-description">
+                    Description
+                </label>
+
+                <textarea
+                    id="service-1-description"
+                    rows="4"
+                    placeholder="Describe this service"
+                ></textarea>
+
+            </div>
+
+            <div class="admin-field">
+
+                <label for="service-1-image">
+                    Image
+                </label>
+
+                <input
+                    type="text"
+                    id="service-1-image"
+                    placeholder="Image path or URL"
+                >
+
+            </div>
+
+
+            <h3>Service 2</h3>
+
+            <div class="admin-field">
+
+                <label for="service-2-title">
+                    Title
+                </label>
+
+                <input
+                    type="text"
+                    id="service-2-title"
+                    placeholder="Service title"
+                >
+
+            </div>
+
+            <div class="admin-field">
+
+                <label for="service-2-description">
+                    Description
+                </label>
+
+                <textarea
+                    id="service-2-description"
+                    rows="4"
+                    placeholder="Describe this service"
+                ></textarea>
+
+            </div>
+
+            <div class="admin-field">
+
+                <label for="service-2-image">
+                    Image
+                </label>
+
+                <input
+                    type="text"
+                    id="service-2-image"
+                    placeholder="Image path or URL"
+                >
+
+            </div>
+
+
+            <h3>Service 3</h3>
+
+            <div class="admin-field">
+
+                <label for="service-3-title">
+                    Title
+                </label>
+
+                <input
+                    type="text"
+                    id="service-3-title"
+                    placeholder="Service title"
+                >
+
+            </div>
+
+            <div class="admin-field">
+
+                <label for="service-3-description">
+                    Description
+                </label>
+
+                <textarea
+                    id="service-3-description"
+                    rows="4"
+                    placeholder="Describe this service"
+                ></textarea>
+
+            </div>
+
+            <div class="admin-field">
+
+                <label for="service-3-image">
+                    Image
+                </label>
+
+                <input
+                    type="text"
+                    id="service-3-image"
+                    placeholder="Image path or URL"
+                >
+
+            </div>
+
+
+            <button type="submit">
+                Save Services Section
+            </button>
+
+        </form>
+
+    </section>
+        <!-- PROOF / TRUST SECTION -->
+
+        <section class="admin-section">
+
+            <h2>Proof &amp; Trust</h2>
+
+            <form id="proof-form">
+
+                <div class="admin-field">
+
+                    <label for="proof-enabled">
+                        Show Proof &amp; Trust Section
+                    </label>
+
+                    <select
+                        id="proof-enabled"
+                        name="enabled"
+                    >
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select>
+
+                </div>
+
+
+                <!-- TESTIMONIAL -->
+
+                <h3>Testimonial</h3>
+
+                <div class="admin-field">
+
+                    <label for="testimonial-quote">
+                        Customer Quote
+                    </label>
+
+                    <textarea
+                        id="testimonial-quote"
+                        rows="4"
+                        placeholder="What did the customer say about the business?"
+                    ></textarea>
+
+                </div>
+
+
+                <div class="admin-field">
+
+                    <label for="testimonial-name">
+                        Customer Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="testimonial-name"
+                        placeholder="Customer name"
+                    >
+
+                </div>
+
+
+                <!-- STATISTICS -->
+
+                <h3>Statistics</h3>
+
+
+                <div class="admin-field">
+
+                    <label for="statistic-1-value">
+                        Statistic 1 Value
+                    </label>
+
+                    <input
+                        type="text"
+                        id="statistic-1-value"
+                        placeholder="100+"
+                    >
+
+                </div>
+
+
+                <div class="admin-field">
+
+                    <label for="statistic-1-label">
+                        Statistic 1 Label
+                    </label>
+
+                    <input
+                        type="text"
+                        id="statistic-1-label"
+                        placeholder="Customers Served"
+                    >
+
+                </div>
+
+
+                <div class="admin-field">
+
+                    <label for="statistic-2-value">
+                        Statistic 2 Value
+                    </label>
+
+                    <input
+                        type="text"
+                        id="statistic-2-value"
+                        placeholder="5★"
+                    >
+
+                </div>
+
+
+                <div class="admin-field">
+
+                    <label for="statistic-2-label">
+                        Statistic 2 Label
+                    </label>
+
+                    <input
+                        type="text"
+                        id="statistic-2-label"
+                        placeholder="Customer Rating"
+                    >
+
+                </div>
+
+
+                <div class="admin-field">
+
+                    <label for="statistic-3-value">
+                        Statistic 3 Value
+                    </label>
+
+                    <input
+                        type="text"
+                        id="statistic-3-value"
+                        placeholder="24/7"
+                    >
+
+                </div>
+
+
+                <div class="admin-field">
+
+                    <label for="statistic-3-label">
+                        Statistic 3 Label
+                    </label>
+
+                    <input
+                        type="text"
+                        id="statistic-3-label"
+                        placeholder="Online Availability"
+                    >
+
+                </div>
+
+                                <!-- REVIEWS -->
+
+                <h3>Customer Reviews</h3>
+
+                <div class="admin-field">
+
+                    <label for="review-1-text">
+                        Review 1
+                    </label>
+
+                    <textarea
+                        id="review-1-text"
+                        rows="4"
+                        placeholder="Customer review"
+                    ></textarea>
+
+                </div>
+
+                <div class="admin-field">
+
+                    <label for="review-1-name">
+                        Reviewer 1 Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="review-1-name"
+                        placeholder="Customer name"
+                    >
+
+                </div>
+
+
+                <div class="admin-field">
+
+                    <label for="review-2-text">
+                        Review 2
+                    </label>
+
+                    <textarea
+                        id="review-2-text"
+                        rows="4"
+                        placeholder="Customer review"
+                    ></textarea>
+
+                </div>
+
+                <div class="admin-field">
+
+                    <label for="review-2-name">
+                        Reviewer 2 Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="review-2-name"
+                        placeholder="Customer name"
+                    >
+
+                </div>
+
+
+                <div class="admin-field">
+
+                    <label for="review-3-text">
+                        Review 3
+                    </label>
+
+                    <textarea
+                        id="review-3-text"
+                        rows="4"
+                        placeholder="Customer review"
+                    ></textarea>
+
+                </div>
+
+                <div class="admin-field">
+
+                    <label for="review-3-name">
+                        Reviewer 3 Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="review-3-name"
+                        placeholder="Customer name"
+                    >
+
+                </div>
+                      
+                                <!-- CERTIFICATIONS -->
+
+                <h3>Certifications</h3>
+
+                <div class="admin-field">
+
+                    <label for="certification-1-name">
+                        Certification 1
+                    </label>
+
+                    <input
+                        type="text"
+                        id="certification-1-name"
+                        placeholder="Certification name"
+                    >
+
+                </div>
+
+                <div class="admin-field">
+
+                    <label for="certification-1-issuer">
+                        Issuing Organization 1
+                    </label>
+
+                    <input
+                        type="text"
+                        id="certification-1-issuer"
+                        placeholder="Issuing organization"
+                    >
+
+                </div>
+
+
+                <div class="admin-field">
+
+                    <label for="certification-2-name">
+                        Certification 2
+                    </label>
+
+                    <input
+                        type="text"
+                        id="certification-2-name"
+                        placeholder="Certification name"
+                    >
+
+                </div>
+
+                <div class="admin-field">
+
+                    <label for="certification-2-issuer">
+                        Issuing Organization 2
+                    </label>
+
+                    <input
+                        type="text"
+                        id="certification-2-issuer"
+                        placeholder="Issuing organization"
+                    >
+
+                </div>
+
+
+                <div class="admin-field">
+
+                    <label for="certification-3-name">
+                        Certification 3
+                    </label>
+
+                    <input
+                        type="text"
+                        id="certification-3-name"
+                        placeholder="Certification name"
+                    >
+
+                </div>
+
+                <div class="admin-field">
+
+                    <label for="certification-3-issuer">
+                        Issuing Organization 3
+                    </label>
+
+                    <input
+                        type="text"
+                        id="certification-3-issuer"
+                        placeholder="Issuing organization"
+                    >
+
+                </div>
+<!-- PORTFOLIO -->
+
+<h3>Portfolio</h3>
+
+<div class="admin-field">
+
+    <label for="portfolio-1-title">
+        Portfolio 1 Title
+    </label>
+
+    <input
+        type="text"
+        id="portfolio-1-title"
+        placeholder="Project or work title"
+    >
+
+</div>
+
+<div class="admin-field">
+
+    <label for="portfolio-1-description">
+        Portfolio 1 Description
+    </label>
+
+    <textarea
+        id="portfolio-1-description"
+        rows="4"
+        placeholder="Describe this project or work"
+    ></textarea>
+
+</div>
+
+<div class="admin-field">
+
+    <label for="portfolio-1-image">
+        Portfolio 1 Image
+    </label>
+
+    <input
+        type="text"
+        id="portfolio-1-image"
+        placeholder="Image URL"
+    >
+
+</div>
+
+
+<div class="admin-field">
+
+    <label for="portfolio-2-title">
+        Portfolio 2 Title
+    </label>
+
+    <input
+        type="text"
+        id="portfolio-2-title"
+        placeholder="Project or work title"
+    >
+
+</div>
+
+<div class="admin-field">
+
+    <label for="portfolio-2-description">
+        Portfolio 2 Description
+    </label>
+
+    <textarea
+        id="portfolio-2-description"
+        rows="4"
+        placeholder="Describe this project or work"
+    ></textarea>
+
+</div>
+
+<div class="admin-field">
+
+    <label for="portfolio-2-image">
+        Portfolio 2 Image
+    </label>
+
+    <input
+        type="text"
+        id="portfolio-2-image"
+        placeholder="Image URL"
+    >
+
+</div>
+
+
+<div class="admin-field">
+
+    <label for="portfolio-3-title">
+        Portfolio 3 Title
+    </label>
+
+    <input
+        type="text"
+        id="portfolio-3-title"
+        placeholder="Project or work title"
+    >
+
+</div>
+
+<div class="admin-field">
+
+    <label for="portfolio-3-description">
+        Portfolio 3 Description
+    </label>
+
+    <textarea
+        id="portfolio-3-description"
+        rows="4"
+        placeholder="Describe this project or work"
+    ></textarea>
+
+</div>
+
+<div class="admin-field">
+
+    <label for="portfolio-3-image">
+        Portfolio 3 Image
+    </label>
+
+    <input
+        type="text"
+        id="portfolio-3-image"
+        placeholder="Image URL"
+    >
+
+</div>
+                <button type="submit">
+                    Save Proof &amp; Trust
+                </button>
+
+            </form>
+
+        </section>
+</main>
+
+
+<script type="module" src="js/admin.js"></script>
+
+</body>
+
+</html>
