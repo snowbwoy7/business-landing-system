@@ -5,6 +5,7 @@ import { renderProof } from "./components/proof.js";
 import { renderHowItWorks } from "./components/howItWorks.js";
 import { renderConversion } from "./components/conversion.js";
 import { renderFaq } from "./components/faq.js";
+import { renderPortfolio } from "./components/portfolio.js";
 import { renderHeader } from "./components/header.js";
 import { renderFooter } from "./components/footer.js";
 import { validateBusinessData } from "./validateBusinessData.js";
@@ -100,7 +101,9 @@ app.innerHTML = `
         : ""
     }
 
-    ${renderFooter(data)}
+${renderPortfolio(data.proof?.portfolio || [])}
+
+${renderFooter(data)}
 `;
 
 }

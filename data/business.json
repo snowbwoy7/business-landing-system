@@ -110,9 +110,17 @@
         "name": "",
         "issuer": ""
       }
-    ],
-    "portfolio": [],
-    "clientLogos": []
+  ],
+    
+"portfolio": [
+{
+"title": "I did this",
+    "description": "snow tech-solved-it",
+    "image": "/images/portfolio-1.png"
+  }
+],
+  
+"clientLogos": []
   },
   "howItWorks": {
     "enabled": true,
