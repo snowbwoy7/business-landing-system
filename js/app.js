@@ -101,7 +101,10 @@ app.innerHTML = `
         : ""
     }
 
-${renderPortfolio(data.proof?.portfolio || [])}
+${data.proof?.portfolioEnabled !== false
+    ? renderPortfolio(data.proof?.portfolio || [])
+    : ""
+}    
 
 ${renderFooter(data)}
 `;

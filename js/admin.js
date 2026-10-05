@@ -46,9 +46,12 @@ const certification3Name =
 
 const certification3Issuer =
     document.getElementById("certification-3-issuer");
-    const portfolio1Title =
-    document.getElementById("portfolio-1-title");
 
+const portfolioEnabled =
+    document.getElementById("portfolio-enabled");
+
+const portfolio1Title =
+    document.getElementById("portfolio-1-title");
 const portfolio1Description =
     document.getElementById("portfolio-1-description");
 
@@ -416,7 +419,13 @@ certification3Name.value =
 
 certification3Issuer.value =
     certifications[2]?.issuer || "";
-// PORTFOLIO
+
+    // PORTFOLIO
+
+portfolioEnabled.value =
+    String(
+        businessData.proof?.portfolioEnabled ?? true
+    );
 
 const portfolio =
     businessData.proof?.portfolio || [];
@@ -891,6 +900,9 @@ businessData.proof.certifications = [
 ];
 
 // PORTFOLIO
+
+businessData.proof.portfolioEnabled =
+    portfolioEnabled.value === "true";
 
 businessData.proof.portfolio = [
 
