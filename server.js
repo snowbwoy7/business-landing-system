@@ -2,6 +2,7 @@ import express from "express";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import { validateBusinessData } from "./js/validateBusinessData.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -30,6 +31,15 @@ app.post("/api/business", (req, res) => {
     const filePath = path.join(__dirname, "data", "business.json");
 
     try {
+        const validation = validateBusinessData(req.body);
+
+        if (!validation.valid) {
+            return res.status(400).json({
+                error: "Invalid business data.",
+                details: validation.errors
+            });
+        }
+
         fs.writeFileSync(
             filePath,
             JSON.stringify(req.body, null, 2),
